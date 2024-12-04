@@ -1,0 +1,28 @@
+h2 { 
+  background: black;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.15);
+}
+
+#material-list {
+  margin-top: 50px;
+
+  li {
+    border-radius: 15px;
+    padding: 10px 20px;
+  }
+}
+
+.material-heading {
+  padding-bottom: 10px;
+}
+
+
+#material-list li:nth-child(odd) {
+  display: flex;
+  flex-direction: column;
+  align-content: end;
+  background-color: #efefef
+}
