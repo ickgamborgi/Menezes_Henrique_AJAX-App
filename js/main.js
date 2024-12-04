@@ -27,6 +27,9 @@ console.log("Javascript file is linked.");
         infoBoxes.forEach((infoBox, index) => {
           let selected = document.querySelector(`#hotspot-${index + 1}`);
     
+          const imageElement = document.createElement('img');
+          imageElement.src = infoBox.thumbnail;
+
           const titleElement = document.createElement('h3');
           titleElement.textContent = infoBox.heading;
     
@@ -34,7 +37,7 @@ console.log("Javascript file is linked.");
           textElement.textContent = infoBox.description;
     
           selected.innerHTML = "";
-          selected.append(titleElement, textElement);
+          selected.append(imageElement, titleElement, textElement);
         });
 
         loader.classList.add("hidden");
@@ -45,7 +48,7 @@ console.log("Javascript file is linked.");
       .catch(error => {
         console.error(error);
         const errorMessage = document.createElement("p");
-        errorMessage.textContent = `Ooops... something went wrong! Please check your internet connection or try again later — ERROR: [${error}]`;
+        errorMessage.textContent = `We're so sorry! Apparently something went wrong, please test your internet connection or try again later — ERROR: [${error}]`;
 
         loaderCon.innerHTML = "";
         loaderCon.appendChild(loader);
@@ -87,7 +90,7 @@ console.log("Javascript file is linked.");
         console.error(error);
         
         const errorMessage = document.createElement("p");
-        errorMessage.textContent = `Ooops... something went wrong! Please check your internet connection or try again later. (ERROR: ${error})`;
+        errorMessage.textContent = `We're so sorry! Apparently something went wrong, please test your internet connection or try again later — ERROR: [${error}]`;
 
         loaderCon2.innerHTML = "";
         loaderCon2.appendChild(loader2);
