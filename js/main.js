@@ -28,7 +28,7 @@ console.log("Javascript file is linked.");
           let selected = document.querySelector(`#hotspot-${index + 1}`);
     
           const imageElement = document.createElement('img');
-          imageElement.src = infoBox.thumbnail;
+          imageElement.src = '../images/' + infoBox.thumbnail;
 
           const titleElement = document.createElement('h3');
           titleElement.textContent = infoBox.heading;
